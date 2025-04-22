@@ -15,10 +15,13 @@ Ce dépôt présente comment utiliser l'API de Perplexity AI pour interagir avec
   - Top-p sampling
   - Presence penalty
   - Frequency penalty
+- 💬 Support des conversations avec historique
 
 ## Exemples :
 - `python_example.py` : Exemple de base avec les derniers modèles
 - `streaming_example.py` : Démonstration du streaming
+- `advanced_example.py` : Utilisation des paramètres avancés
+- `conversation_example.py` : Conversation interactive avec historique
 - `curl_example.sh` : Exemple avec cURL
 
 ---
