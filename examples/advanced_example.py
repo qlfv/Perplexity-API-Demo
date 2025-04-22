@@ -13,7 +13,7 @@ headers = {
     "Content-Type": "application/json"
 }
 
-# Exemple avec tous les paramètres avancés
+# Exemple avec les paramètres avancés compatibles
 payload = {
     "model": "llama-3.1-sonar-small-128k-online",
     "messages": [
@@ -21,10 +21,8 @@ payload = {
         {"role": "user", "content": "Explique-moi la différence entre l'apprentissage supervisé et non supervisé."}
     ],
     "max_tokens": 1000,
-    "temperature": 0.8,  # Plus créatif
-    "top_p": 0.95,      # Plus diversifié
-    "presence_penalty": 0.5,  # Encourage la diversité des sujets
-    "frequency_penalty": 0.5,  # Réduit la répétition
+    "temperature": 0.7,  # Valeur entre 0 et 1
+    "top_p": 0.9,       # Valeur entre 0 et 1
     "stream": False
 }
 
@@ -46,6 +44,8 @@ try:
                 
 except requests.exceptions.RequestException as e:
     print(f"Erreur de requête : {e}")
+    if hasattr(e.response, 'text'):
+        print(f"Détails de l'erreur : {e.response.text}")
 except json.JSONDecodeError as e:
     print(f"Erreur de décodage JSON : {e}")
 except Exception as e:
