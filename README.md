@@ -3,9 +3,23 @@
 Ce dépôt présente comment utiliser l'API de Perplexity AI pour interagir avec des modèles de langage avancés.
 
 ## Fonctionnalités :
-- 🌐 Envoi de requêtes REST à l'API Perplexity.
-- 🤖 Utilisation de modèles comme `llama-3.1-sonar-small-128k-online	` et `llama-3.1-sonar-huge-128k-online`.
-- 📄 Gestion des citations dans les réponses (optionnel).
+- 🌐 Envoi de requêtes REST à l'API Perplexity
+- 🤖 Utilisation des derniers modèles :
+  - `llama-3.1-sonar-small-128k-online`
+  - `llama-3.1-sonar-huge-128k-online`
+  - `llama-3.1-sonar-large-128k-online`
+- 📄 Gestion des citations dans les réponses
+- 🔄 Support du streaming pour les réponses en temps réel
+- ⚙️ Paramètres avancés :
+  - Temperature
+  - Top-p sampling
+  - Presence penalty
+  - Frequency penalty
+
+## Exemples :
+- `python_example.py` : Exemple de base avec les derniers modèles
+- `streaming_example.py` : Démonstration du streaming
+- `curl_example.sh` : Exemple avec cURL
 
 ---
 
